@@ -19,5 +19,11 @@ pipeline {
                 sh 'mvn verify -DskipunitTests'
             }
         }
+
+        stage('Build'){
+            steps{
+                sh 'mvn clean install'
+            }
+        }
     }
 }
