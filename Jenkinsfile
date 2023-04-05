@@ -7,5 +7,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/radhikaaathakkar/xebiasme'
             }
         }
+
+        stage('Unit Testing'){
+            steps{
+                sh 'mvn test'
+            }
+        }
     }
 }
