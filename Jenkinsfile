@@ -14,7 +14,7 @@ pipeline {
             }
         }
 
-        stages('Integration Testing'){
+        stage('Integration Testing'){
             steps{
                 sh 'mvn verify -DskipunitTests'
             }
